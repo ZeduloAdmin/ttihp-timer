@@ -11,4 +11,8 @@ test/sim_build
 test/__pycache__/
 test/results.xml
 test/gate_level_netlist.v
+<<<<<<< HEAD
 tt
+=======
+tt/
+>>>>>>> 5a32d0b30a3a8a58e46b5d1ee7ec39b2317b2da6

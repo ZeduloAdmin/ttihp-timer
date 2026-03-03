@@ -53,13 +53,21 @@ module tt_um_ztimer_top (
 		.clear			(ui_in[6]),
 		.start			(ui_in[7]),
 		.stop			(uio_in[3]),
+<<<<<<< HEAD
 		.elapsed_count  (t3_elapsed_count)
+=======
+		.elapsed_count  (t5_elapsed_count)
+>>>>>>> 5a32d0b30a3a8a58e46b5d1ee7ec39b2317b2da6
 		);
 		
 		
 	assign uo_out[7:1] = 7'b0000_000;
 
+<<<<<<< HEAD
 	// List all unused inputs to prevent warnings
+=======
+  	// List all unused inputs to prevent warnings
+>>>>>>> 5a32d0b30a3a8a58e46b5d1ee7ec39b2317b2da6
 	wire dummy = &{ uio_in[7:4], ena };
 	assign uo_out[0] = dummy;
 	wire _unused = &{clk, 1'b0};
