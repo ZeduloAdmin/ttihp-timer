@@ -6,9 +6,9 @@
 */
 module tb ();
 
-  // Dump the signals to a VCD file. You can view it with gtkwave or surfer.
+  // Dump the signals to a FST file. You can view it with gtkwave or surfer.
   initial begin
-    $dumpfile("tb.vcd");
+    $dumpfile("tb.fst");
     $dumpvars(0, tb);
     #1;
   end
@@ -22,11 +22,9 @@ module tb ();
   wire [7:0] uo_out;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
-   
+
   // Replace tt_um_example with your module name:
   tt_um_ztimer_top user_project (
-
-      // Include power ports for the Gate Level test:
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
