@@ -29,9 +29,9 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "sck_i"
-  ui[1]: "csb_i"
-  ui[2]: "sd_i"
+  ui[0]: "SPI_SCK"
+  ui[1]: "SPI_CS"
+  ui[2]: "SPI_MOSI"
   ui[3]: "start_1"
   ui[4]: "stop_1"
   ui[5]: "start_2"
@@ -39,8 +39,8 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: "dummy"
-  uo[1]: "sd_o"
+  uo[0]: "SPI_MISO"
+  uo[1]: ""
   uo[2]: ""
   uo[3]: ""
   uo[4]: ""
@@ -49,10 +49,10 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "stop_1"
-  uio[1]: "stop_2"
-  uio[2]: "stop_3"
-  uio[3]: "stop_4"
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
