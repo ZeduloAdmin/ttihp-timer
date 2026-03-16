@@ -24,8 +24,8 @@ module tt_um_ztimer_top (
 	
 	
 	
-	wire [31:0] t0_elapsed_count;
-	wire [31:0] t1_elapsed_count;
+	reg [31:0] t0_elapsed_count;
+	reg [31:0] t1_elapsed_count;
 
 
 //=======================================================
@@ -33,7 +33,8 @@ module tt_um_ztimer_top (
 //=======================================================
    assign counters_i[31:0] =  t0_elapsed_count;
    assign counters_i[63:32] = t1_elapsed_count;
-
+   assign uo_out[1] = rst_n;
+   
 
 //=======================================================
 //  Instantiation
@@ -65,7 +66,7 @@ module tt_um_ztimer_top (
         .cio_sck_i  (ui_in[0]),
         .cio_csb_i  (ui_in[1]),
         .cio_sd_i   (ui_in[2]),
-        .cio_sd_o   (uo_out[1]),
+        .cio_sd_o   (uo_out[0]),
 
         .counters_i (counters_i),
         .cnt_idx    (cnt_idx),
@@ -76,14 +77,13 @@ module tt_um_ztimer_top (
 //=======================================================
 //  Structural coding
 //=======================================================
-		
-    
-	assign uo_out[7:2] = 7'b0000_00;
+
+	assign uo_out[7:2] = 7'b0000_000;
 
 	// List all unused inputs to prevent warnings
-	wire dummy = &{ ui_in[7], uio_in[7:0] };
-	assign uo_out[0] = dummy;
+	wire _unused = &{ ui_in[7], uio_in[7:0] };
 	
-	assign uio_oe = 8'b0000_0000;
+	assign uio_oe  = 8'b0000_0000;
     assign uio_out = 8'b0000_0000;
+    
 endmodule
