@@ -49,10 +49,10 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
+  uio[0]: "stop_1"
+  uio[1]: "stop_2"
+  uio[2]: "stop_3"
+  uio[3]: "stop_4"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""

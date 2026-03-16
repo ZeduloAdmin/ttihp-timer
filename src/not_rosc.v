@@ -20,4 +20,3 @@ module not_rosc #(
   );
     
 endmodule
-
