@@ -2,7 +2,7 @@
 
 # Zedulo Timer chip - SPI
 
-This project demonstrates a fast ring oscillator timer implemented using a chain of inverters. The oscillator drives a counter whose value is read out by an embedded SPI device, providing a visible indication that the oscillator is running.
+This project demonstrates a fast ring oscillator timer implemented using a chain of inverters. The oscillator drives a counter whose value is read out by an embedded SPI device, providing a visible indication that the oscillator is running. The SPI device also aids in clearing the registers in the timer using an opcode.
 The estimated frequency is not known yet, however the target frequency is about 350GHz.
 
 ### Features
